@@ -84,6 +84,7 @@ class Book(models.Model):
     Book_Name = models.CharField(max_length=50)
     Author = models.CharField(max_length=50)
     Description = models.TextField()
+    Book_File = models.FileField(upload_to=None)
     user = models.ForeignKey(User, related_name='Books',
                              on_delete=models.CASCADE)
     creation_time = models.DateTimeField(auto_now_add=True, blank=True)
